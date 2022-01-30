@@ -5,26 +5,199 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- fonts link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- header section -->
-    <section>
+
+    <section id="header">
         <nav>
             <!-- logo -->
-            <a href="#">
-                <h1>iamTaimoor</h1>
+            <a href="#" class="logo-header">
+                <h1>iam<span class="name">Taimoor</span></h1>
             </a>
             <!-- menu Items-->
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Recent</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#my-projects">Projects</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Contact Me Button -->
-            <a href="#"Get in touch></a>
+            <a href="#" class="portfolio-button">Get in touch</a>
         </nav>
     </section>
+
+    <!-- Main Section -->
+
+    <div class="content" id="home">
+        <!-- div on the right -->
+        <div class="main-text">
+            <h1>iam<span class="name">Taimoor</span></h1>
+            <p>i am tamioor, Full Stack developer. i love coding in NodeJS, ReactJS and phython</p>
+            <p>i love writing good code<code></code></p>
+            <a href="#" class="get-in-touch">Get in touch</a>
+        </div>
+        <!-- div on the left -->
+        <div class="model">
+            <img src="./images/img1.jpeg" alt="" class="img">
+        </div>
+    </div>
+
+    <!--Skills Section --> 
+
+    <section id="skills">
+        <!-- skills img side on the left -->
+        <div class="skill-img">
+            <img src="./images/skills-img.jpg" alt="">
+        </div>
+         <!-- skills text right side -->
+         <div class="skill-text">
+            <div class="skill-heading">
+                <span>MY SKILLS</span>
+                <h1>My Expertise</h1>
+            </div>
+            <!-- skill description -->
+            <div class="descriptions">
+                <!-- skill box 1 -->
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div>
+                        <strong>JavaScript</strong>
+                        <p>I am an expert in JavaScript</p>
+                    </div>
+                </div>
+                <!-- skill box 2 -->
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3"></i>
+                    </div>
+                    <div>
+                        <strong>JavaScript</strong>
+                        <p>I am becoming an expert in css</p>
+                    </div>
+                </div>
+                <!-- skill box 3 -->
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div>
+                        <strong>JavaScript</strong>
+                        <p>I am still learning python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Projects Section -->
+
+    <section id="my-projects">
+        <!-- project heading -->
+        <div class="skill-heading">
+            <span>MY Projects</span>
+            <h1>My Happy Clients</h1>
+        </div>
+        <!-- project showcase -->
+        <div class="project-showcase">
+            <div class="project one">
+                <div id="hide">
+                    <p class="project-text">Coca Cola</p>
+                    <a href="" class="project-btn">Vist Website</a>
+                </div>
+            </div>
+            <div class="project two">
+                <div id="hide">
+                    <p class="project-text">Coca Cola</p>
+                    <a href="" class="project-btn">Vist Website</a>
+                </div>
+            </div>
+            <div class="project three">
+                <div id="hide">
+                    <p class="project-text">Coca Cola</p>
+                    <a href="" class="project-btn">Vist Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+
+    <section id="clients">
+        <!-- heading -->
+        <div class="skill-heading">
+            <span>Testimonials</span>
+            <h1>Hear from my Happy Clients</h1>
+        </div>
+        <!-- Reviews -->
+        <div class="client-box-container">
+            <!-- Testimonial # 1 -->
+            <div class="client-box">
+                <img src="./images/man.svg" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>i had great experience working with Taimoor Chatha</p>
+                <a href="#">Read More</a>
+            </div>
+            <!-- Testimonial # 2 -->
+            <div class="client-box">
+                <img src="./images/bussiness-man.svg" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>i had great experience working with Taimoor Chatha</p>
+                <a href="#">Read More</a>
+            </div>
+            <!-- Testimonial # 3 -->
+            <div class="client-box">
+                <img src="/images/woman.svg" alt="">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>i had great experience working with Taimoor Chatha</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact us section -->
+
+    <section id="contact">
+        <img src="/images/contact.jpg" alt="">
+        <h3>Let's work together - contact me</h3>
+        <din class="contact-input">
+            <input type="email" placeholder="tamoorchatha82@gmail.com">
+            <a href="#">Let's connect</a>
+        </din>
+    </section>
+
+
+    <!-- footer -->
+
+    <footer>
+        <p>imTaimoor Official</p>
+        <p>Copyright 2022 - Taimoor Chatha (DevNation)</p>
+    </footer>
 </body>
 </html>
