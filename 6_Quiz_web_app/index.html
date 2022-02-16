@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Developer's Quiz App</title>
+  </head>
+  <body>
+      <!-- Header section -->
+    <div class="intro py-3 bg-white text-center">
+        <div class="container">
+            <h2 class="text-primary display-3 my-4">Developer's Quiz</h2>
+        </div>
+    </div>
+    <!-- result section -->
+    <div class="result py-5 text-center bg-light d-none">
+        <div class="container">
+            <p>You Are <span class="text-primary p-3 display-4">0%</span>Expert Developer</p>
+        </div>
+    </div>
+
+    <!-- quiz section -->
+    <div class="quiz py-4 bg-primary">
+        <div class="container">
+            <h2 class="my-5 text-white">Let's Begin</h2>
+            <form action="" class="quiz-form text-light">
+                <!-- question 1 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">1. what is the method to print something in the javascript?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q1" value="A" checked>
+                        <label class="form-check-label">HTML</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q1" value="B">
+                        <label class="form-check-label">CSS</label>
+                    </div>
+                </div>
+                <!-- question-2 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">2. what is the back bone of all webpages?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q2" value="A" checked>
+                        <label class="form-check-label">print('value')</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q2" value="B">
+                        <label class="form-check-label">console.log('value')</label>
+                    </div>
+                </div>
+                <!-- question-3 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">3. Can we use forEach method on HTML collection?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q3" value="A" checked>
+                        <label class="form-check-label">YES</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q3" value="B">
+                        <label class="form-check-label">NO</label>
+                    </div>
+                </div>
+                <!-- quesion -4 -->
+                <div class="my-5">
+                    <p class="lead font-weight-normal">4. what is developer's favourite array method?</p>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q4" value="A" checked>
+                        <label class="form-check-label">forEach()</label>
+                    </div>
+                    <div class="form-check my-2 text-white-50">
+                        <input type="radio" name="q4" value="B">
+                        <label class="form-check-label">slice()</label>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="text-center">
+                    <input type="submit" class="btn btn-light" value="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="./index.js"></script>
+
+  </body>
+</html>
