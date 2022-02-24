@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: hsl(209, 61%, 16%,);
+}
+/* main heading */
+.main-heading h2{
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #102A42;
+}
+.underline{
+    width: 5rem;
+    height: 0.25rem;
+    background: #C59D5F;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* buttons */
+.filter-btn{
+    background: transparent;
+    border-color: #C59D5F;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 0.3rem 0.75rem;
+    color: #C59D5F;
+    transition: 0.3s linear;
+}
+.link-btns a{
+    text-decoration: none;
+}
+.filter-btn:hover{
+    background-color: #C59D5F;
+    color: white;
+}
+
+/* items */
+.item{
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+}
+.img{
+    width: 225px;
+    height: 150px;
+    border-radius: 5px;
+    border: 5px solid #C59D5F;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+.item-text-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted #617D98;
+}
+.item-text-header h4{
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+.item-name{
+    color: #102A42;
+}
+.price{
+    color: #C59D5F;
+    font-weight: 600;
+}
+.item-text p{
+    margin-bottom: 0;
+    padding-top: 1rem;
+    color: #7D95AB;
+}
+.foods{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+    justify-items: center;
+}
