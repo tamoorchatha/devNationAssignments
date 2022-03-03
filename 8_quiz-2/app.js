@@ -1,3 +1,6 @@
+// selecting the food item container
+const foodContainer = document.querySelector(".food-container");
+
 const fooditem = [
   {
     FoodName: "Cheese paratha",
@@ -80,148 +83,52 @@ const fooditem = [
   },
 ];
 
-// collecting  data from the array
+// collecting data from the  array
 
-let breakFast = [];
-for (let i = 0; i < fooditem.length; i++) {
-  if (fooditem[i].type === "breakFast") {
-    breakFast.push(fooditem[i]);
-  }
-}
-console.log(breakFast)
-
-let Lunch = [];
-for (let i = 0; i < fooditem.length; i++) {
-  if (fooditem[i].type === "Lunch") {
-    Lunch.push(fooditem[i]);
-  }
-}
-
-let Dinner = [];
-for (let i = 0; i < fooditem.length; i++) {
-  if (fooditem[i].type === "Dinner") {
-    Dinner.push(fooditem[i]);
-  }
-}
-
-let Shakes = [];
-for (let i = 0; i < fooditem.length; i++) {
-  if (fooditem[i].type === "Shakes") {
-    Shakes.push(fooditem[i]);
-  }
-}
-
-const All = document.querySelector(".All");
-const breakfast = document.querySelector(".breakfast");
-const lunch = document.querySelector(".lunch");
-const shakes = document.querySelector(".shakes");
-const dinner = document.querySelector(".dinner");
-let foods = document.querySelector(".foods");
-console.log(foods);
-
-
-// event listener on breakfast
-breakfast.addEventListener("click", () => {
-  breakFast.forEach((item) => {
-    foods.innerHTML += `
-        <div class="item">
-        <div class="img">
-            <img src="./${item.foodimg}" alt="">
-        </div>
-        <div class="item-text">
-            <div class="item-text-header">
-                <h4 class="item-name">${item.FoodName}</h4>
-                <h4 class="price">${item.price}</h4>
-            </div>
-            <p>${item.des}</p>
-        </div>
-    </div>
-        `;
-  });
-
-},{once : true});
-
-// event listener on lunch
-lunch.addEventListener("click", () => {
-    Lunch.forEach((item) => {
-      foods.innerHTML += `
-          <div class="item">
-          <div class="img">
-              <img src="./${item.foodimg}" alt="">
-          </div>
-          <div class="item-text">
-              <div class="item-text-header">
-                  <h4 class="item-name">${item.FoodName}</h4>
-                  <h4 class="price">${item.price}</h4>
-              </div>
-              <p>${item.des}</p>
-          </div>
+const food = fooditem.map((item) => {
+  const foodBox = `<div class="item ${item.type}">
+  <div class="img">
+      <img src="${item.foodimg}" alt="">
+  </div>
+  <div class="item-text">
+      <div class="item-text-header">
+          <h4 class="item-name">${item.FoodName}</h4>
+          <h4 class="price">${item.price}</h4>
       </div>
-          `;
-    });
-  
-  },{once : true});
+      <p>${item.des}</p>
+  </div>
+</div>`;
 
-//   event listener on dinner
+  foodContainer.innerHTML += foodBox;
+});
 
-dinner.addEventListener("click", () => {
-    Dinner.forEach((item) => {
-      foods.innerHTML += `
-          <div class="item">
-          <div class="img">
-              <img src="./${item.foodimg}" alt="">
-          </div>
-          <div class="item-text">
-              <div class="item-text-header">
-                  <h4 class="item-name">${item.FoodName}</h4>
-                  <h4 class="price">${item.price}</h4>
-              </div>
-              <p>${item.des}</p>
-          </div>
-      </div>
-          `;
-    });
-  
-  },{once : true});
+// collecting menu buutons
+const menu = document.querySelectorAll('.filter-btn');
+const foodBox = document.querySelectorAll('.item');
 
-//   event listener on shakes 
-shakes.addEventListener("click", () => {
-    Shakes.forEach((item) => {
-      foods.innerHTML += `
-          <div class="item">
-          <div class="img">
-              <img src="./${item.foodimg}" alt="">
-          </div>
-          <div class="item-text">
-              <div class="item-text-header">
-                  <h4 class="item-name">${item.FoodName}</h4>
-                  <h4 class="price">${item.price}</h4>
-              </div>
-              <p>${item.des}</p>
-          </div>
-      </div>
-          `;
-    });
-  
-  },{once : true});
-
-// for all dishes 
-All.addEventListener("click", () => {
-    fooditem.forEach((item) => {
-      foods.innerHTML += `
-          <div class="item">
-          <div class="img">
-              <img src="./${item.foodimg}" alt="">
-          </div>
-          <div class="item-text">
-              <div class="item-text-header">
-                  <h4 class="item-name">${item.FoodName}</h4>
-                  <h4 class="price">${item.price}</h4>
-              </div>
-              <p>${item.des}</p>
-          </div>
-      </div>
-          `;
-    });
-  
-  },{once : true});
+menu.forEach(button=>{
+  button.addEventListener('click', (e)=>{
+    foodBox.forEach(item=>{
+      item.classList.add('d-none')
+      if(e.target.innerHTML == 'All'){
+        item.classList.remove('d-none')
+      }else if(e.target.innerHTML == 'Breakfast'){
+        if(item.classList.contains('breakFast')){
+          item.classList.remove('d-none')
+        }
+      }else if(e.target.innerHTML == 'lunch'){
+        if(item.classList.contains('Lunch')){
+          item.classList.remove('d-none')
+        }
+      }else if(e.target.innerHTML == 'shakes'){
+        if(item.classList.contains('Shakes')){
+          item.classList.remove('d-none')
+        }
+      }else if(e.target.innerHTML == 'dinner'){
+        if(item.classList.contains('Dinner')){
+          item.classList.remove('d-none')
+        }
+      }
+    })
+  })
+})
